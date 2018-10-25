@@ -32,15 +32,7 @@
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
-			o.Albedo.r = IN.worldPos.y * 0.5 + 0.5;
-			if (IN.worldPos.x > 0)
-			{
-				o.Albedo.b = IN.worldPos.x * 0.5 + 0.5;
-			}
-			else
-			{
-				o.Albedo.g = -IN.worldPos.x * 0.5 + 0.5;
-			}
+			o.Albedo.rgb = IN.worldPos.xyz * 0.5 + 0.5;
 			
 			o.Alpha = 1;
 		}
